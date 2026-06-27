@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You 💖</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Audio Player -->
+    <audio id="bg-music" loop autoplay>
+        <source src="Lirik dan Terjemahan - Ive always loved you (Arash Buana)- NEW.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Tombol Musik (Kanan Atas) -->
+    <button id="music-toggle" class="music-btn">
+        <span class="music-icon">🎵</span> Play
+    </button>
+
+    <main id="app-container">
+        
+        <!-- SCENE 1: PASSWORD -->
+        <section id="scene-password" class="scene active">
+            <div class="media-layer">
+                <img src="1-open.gif" alt="Cute GIF" class="gif-media blend-multiply">
+            </div>
+            <div class="text-layer">
+                <h1>halow sayangkuuu! 🌸✨</h1>
+                <p class="long-text">ayoo tebak password nyyya apaa.. akuu yakin banget kamuu pasti bisa nebak deh! 🙈❤️</p>
+            </div>
+            <div class="action-layer">
+                <div class="pin-display">
+                    <div class="pin-dot"></div>
+                    <div class="pin-dot"></div>
+                    <div class="pin-dot"></div>
+                    <div class="pin-dot"></div>
+                    <div class="pin-dot"></div>
+                    <div class="pin-dot"></div>
+                </div>
+                <div class="numpad">
+                    <button class="num-btn" data-val="1">1</button>
+                    <button class="num-btn" data-val="2">2</button>
+                    <button class="num-btn" data-val="3">3</button>
+                    <button class="num-btn" data-val="4">4</button>
+                    <button class="num-btn" data-val="5">5</button>
+                    <button class="num-btn" data-val="6">6</button>
+                    <button class="num-btn" data-val="7">7</button>
+                    <button class="num-btn" data-val="8">8</button>
+                    <button class="num-btn" data-val="9">9</button>
+                    <div class="empty-btn"></div>
+                    <button class="num-btn" data-val="0">0</button>
+                    <button class="del-btn" id="btn-delete">⌫</button>
+                </div>
+                <p class="clue-text">clue : ulang tahun kamuu &lt;3</p>
+                <p id="error-msg" class="error-text hidden">Pin salah nih sayangg, coba pelan-pelan lagi yaa! 🥺</p>
+            </div>
+        </section>
+
+        <!-- SCENE 2: HI CANTIK -->
+        <section id="scene-hi" class="scene">
+            <div class="media-layer">
+                <img src="2-open-new.gif" alt="Cute GIF" class="gif-media blend-multiply">
+            </div>
+            <div class="text-layer">
+                <h1>hi, orang paling cantik! 🦋💖</h1>
+                <p class="long-text">Aku punya sesuatu yang spesial banget nih buat kamu.. Coba klik tombol di bawah yaa hehehe ><</p>
+            </div>
+            <div class="action-layer">
+                <button class="btn-main next-btn" data-target="scene-ready">click iniii 🤍</button>
+            </div>
+        </section>
+
+        <!-- SCENE 3: READY? -->
+        <section id="scene-ready" class="scene">
+            <div class="media-layer">
+                <img src="3-open.gif" alt="Cute GIF" class="gif-media blend-multiply">
+            </div>
+            <div class="text-layer">
+                <h1>kamuu udaa siap belum sayangg? 👀💕</h1>
+                <p class="long-text">Pastiin kamu lagi santai, duduk yang manis, dan siapin senyum kamu yaa bacanya.. 🥺🫶</p>
+            </div>
+            <div class="action-layer split-buttons">
+                <button class="btn-main next-btn" data-target="scene-today">yess 💖</button>
+                <button class="btn-main btn-secondary next-btn" data-target="scene-mad">noo 🙈</button>
+            </div>
+        </section>
+
+        <!-- SCENE 4: MAD (JIKA NO) -->
+        <section id="scene-mad" class="scene">
+            <div class="media-layer">
+                <img src="3-no.gif" alt="Mad GIF" class="gif-media blend-multiply">
+            </div>
+            <div class="text-layer">
+                <h1>OHH KAMU GITU SEKARANG SAMA AKU? 😤💔</h1>
+                <p class="long-text">Masa gamau liat sih.. capek-capek loh aku buatnya, sedih deh akuu. Ayo dong balik lagi terus klik yess! 🥺👉👈</p>
+            </div>
+            <div class="action-layer">
+                <button class="btn-main next-btn" data-target="scene-ready">iyaa iyaa back 🤍</button>
+            </div>
+        </section>
+
+        <!-- SCENE 5: TODAY... -->
+        <section id="scene-today" class="scene">
+            <div class="media-layer">
+                <img src="4-open.gif" alt="Cute GIF" class="gif-media blend-multiply">
+            </div>
+            <div class="text-layer">
+                <h1>hari ini tuh super duper spesial... 🎂✨</h1>
+                <p class="long-text">Bukan cuma buat kamu aja, tapi buat aku juga! Karena di hari ini, malaikat cantikku turun ke dunia.. cieee 🦋💕</p>
+            </div>
+            <div class="action-layer">
+                <button class="btn-main next-btn" data-target="scene-bday">open it 🎁</button>
+            </div>
+        </section>
+
+        <!-- SCENE 6: HAPPY BDAY -->
+        <section id="scene-bday" class="scene">
+            <div class="media-layer">
+                <img src="5-open.gif" alt="Cute GIF" class="gif-media blend-multiply">
+            </div>
+            <div class="text-layer">
+                <h1>Happy Birthday kesayangan aku! 🎉🎊🎀</h1>
+                <p class="long-text">Semoga kamu selalu dikelilingi hal-hal baik, selalu bahagia, sehat terus, dan pastinya.. selalu sayang sama aku yaa! 👩‍❤️‍👨💍</p>
+            </div>
+            <div class="action-layer">
+                <button class="btn-main next-btn" data-target="scene-slowly">lanjut sayangku 💘</button>
+            </div>
+        </section>
+
+        <!-- SCENE 7: READ SLOWLY -->
+        <section id="scene-slowly" class="scene">
+            <div class="media-layer">
+                <img src="6-open.gif" alt="Cute GIF" class="gif-media blend-multiply">
+            </div>
+            <div class="text-layer">
+                <h1>baca pelan-pelan yaa manis.. 💌🥺</h1>
+                <p class="long-text">Di halaman selanjutnya ada beberapa kenangan kecil kita. Sambil dengerin lagunya, aku harap kamu senyum yaa liatnya.. &lt;3</p>
+            </div>
+            <div class="action-layer">
+                <button class="btn-main" id="btn-start-gallery">buka memorinya 💌</button>
+            </div>
+        </section>
+
+        <!-- SCENE 8: DYNAMIC BOOK GALLERY -->
+        <section id="scene-gallery" class="scene">
+            <div class="book-wrapper" id="book-wrapper">
+                <div class="book-page" id="book-page">
+                    <img id="gallery-img" src="" alt="Kenangan" class="book-photo">
+                    <p id="gallery-text" class="book-text"></p>
+                    <div class="page-number" id="page-number">1 / 3</div>
+                </div>
+            </div>
+            <div class="book-nav">
+                <button class="nav-arrow hidden" id="btn-prev-gallery">❮</button>
+                <!-- Tombol Tutup Buku ini akan muncul di halaman terakhir -->
+                <button class="btn-main hidden" id="btn-close-book">Tutup Buku 📕</button>
+                <button class="nav-arrow" id="btn-next-gallery">❯</button>
+            </div>
+        </section>
+
+        <!-- SCENE 9: SPOTIFY -->
+        <section id="scene-spotify" class="scene">
+            <div class="media-layer spotify-layer">
+                <!-- Spotify akan dirender oleh IFrame API di sini -->
+                <div id="embed-iframe"></div>
+            </div>
+            <div class="text-layer">
+                <h1>Lagu ini khusus buat nemenin kamu hari ini... 🎶🎧</h1>
+                <p class="long-text">Tiap denger lagu ini, aku selalu inget kamu. Dengerin sambil lanjut ke halaman terakhir yaa sayangku.. 🥺💖</p>
+            </div>
+            <div class="action-layer">
+                <button class="btn-main next-btn" data-target="scene-finale">Lanjut &lt;3</button>
+            </div>
+        </section>
+
+        <!-- SCENE 10: FINALE -->
+        <section id="scene-finale" class="scene finale-bg">
+            <div id="hearts-container"></div>
+            
+            <div class="text-layer finale-text-layer">
+                <div class="finale-card">
+                    <h1 class="finale-title">selamat ulang tahun, duniaku! 🌍💖</h1>
+                    <p class="long-text finale-text">
+                        Sekali lagi.. selamat bertambah umur yaa, kesayangan aku.<br><br>
+                        Terima kasih banyak udah hadir di hidup aku, terima kasih udah selalu jadi alasan aku buat senyum setiap hari. Kamu itu anugerah terindah yang pernah Tuhan kasih buat aku. 🥺🦋<br><br>
+                        Semoga semua yang kamu impikan bisa segera tercapai. Jangan pernah ngerasa sendiri yaa, ada aku yang bakal terus nemenin kamu lewatin suka duka.<br><br>
+                        Aku sayang banget sama kamu.. I love you more than words can say! ❤️🫶👩‍❤️‍👨
+                    </p>
+                </div>
+            </div>
+
+            <div class="action-layer" style="z-index: 10;">
+                <button class="btn-main" id="btn-restart">Balik ke awal 🤍</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+    <script src="script.js"></script>
+</body>
+</html>
